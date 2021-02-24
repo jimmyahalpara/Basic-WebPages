@@ -1,0 +1,25 @@
+.backgroundPrimaryColor {
+    background-color: pink;
+}
+
+.backgroundSecondaryColor {
+    background-color: rgb(128, 0, 79);
+}
+
+.textSecondaryColor {
+    color:rgb(228, 13, 131);
+}
+
+.fontDancing {
+    font-family: 'Dancing Script', cursive;
+}
+
+.fontSize20 {
+    font-size: 20px;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+
