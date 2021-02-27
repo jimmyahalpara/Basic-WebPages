@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        .container {
+            border: 2px solid green;
+            background-color: khaki;
+            height: 3000px;
+            margin-top: 200px;
+        }
+        .box {
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+            display: inline-block;
+        }
+        #box3{
+            position: absolute;
+            top: 500px;
+            left: 30px;
+        }
+
+        #box4 {
+            position: fixed;
+            right: 3px;
+        }
+
+        #box2{
+            position: sticky;
+            top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">Sticky</div>
+        <div class="box" id="box3">Absolute</div>
+        <div class="box" id="box4">Fixed</div>
+    </div>
+</body>
+</html>
