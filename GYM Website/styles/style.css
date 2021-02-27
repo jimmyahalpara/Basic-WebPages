@@ -1,0 +1,142 @@
+/* used to remove spinner arrows from number input  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* CSS RESET */
+body {
+    padding: 0px;
+    margin: 0px;
+    background: url('../images/mainBackground.jpg');
+    color: white;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.left {
+    display: inline-block;
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 29px;
+    left: 20px;
+}
+
+.left img {
+    width: 100px;
+    border-radius: 100px;
+    filter: invert(100%);
+    margin: 0px auto;
+    display: block;
+}
+
+.left div {
+    text-align: center;
+}
+.mid {
+    /* border: 2px solid green; */
+    width: 60%;
+    display: block;
+    margin: 29px auto;
+}
+.navbar {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 90%;
+    
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px 24px;
+    transition: color 700ms, font-size 700ms, border-radius 700ms;
+    box-sizing: border-box;
+}
+
+.navbar li a:hover, .navbar li a.active {
+    /* text-decoration: underline; */
+    color: grey;
+    font-size: 25px;
+    border: 2px solid grey;
+    border-radius: 2px;
+    background-color: hsla(0, 0%, 100%, 0.2);
+}
+
+.right {
+    display: inline-block;
+    /* border: 2px solid yellow; */
+    position: absolute;
+    top:29px;
+    right: 20px;
+}
+
+.btn {
+    color: white;
+    background-color:hsla(0, 0%, 0%, 0.3);
+    margin: 10px 5px;
+    /* border: 2px solid white; */
+    border: none;
+    border-radius: 1px;
+    font-size: 18px;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 700ms;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    /* color: black; */
+    background-color: grey;
+    border-color: grey;
+}
+
+.btn:active {
+    background-color: grey;
+}
+
+.container {
+    /* border: 2px solid white; */
+    width: 423px;
+    position: absolute;
+    top: 150px;
+    left: 100px;
+    padding: 10px 30px;
+    background-color: hsla(0, 0%, 45%, 0.3);
+}
+
+.container div {
+    margin: 10px 10px;
+}
+
+.container div input {
+    padding: 15px 27px;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    width: 200px;
+    color: white;
+    border: none;
+}
+.container div input::placeholder{
+    color: hsla(0, 0%, 100%, 0.7);
+}
+
+.container div input{
+    background-color: hsla(0, 0%, 100%, 0.3)
+}
