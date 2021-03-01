@@ -1,56 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BASIC WEBPAGE PROJECT</title>
+    <meta name="viewport" content="width=1349, initial-scale=1.0">
+    <title>My Webpages</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Satisfy', cursive;
-            color: #4c0909;
-            background-color: cyan;
-        }
-        ol {
-            font-weight: bolder;
-        }
-
-        a {
-            background-color: black;
-            color: cyan;
-            padding: 1px 10px;
-            text-decoration: none;
-            border-radius: 10px;
-            border: 2px solid black;
-            transition: 500ms;
-        }
-
-        a:hover {
-            background-color: cyan;
-            
-            color: black;
-        }
-        li {
-            padding: 5px 5px;
-        }
-    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="indexStyle.css">
 </head>
+
 <body>
-    <h2>Welcome TO Basic Web Pages Repository</h2>
-    <h4>Here I have kept some html pages which I made while I was learning web programming</h4>
-    <ol> 
-        <li>Basic first page <a href="1. firstFile.html">link</a></li>
-        <li>First page with css <a href="2. cssExample1.html">link</a></li>
-        <li>Colors example with css <a href="4. cssExample2Colors.html">link</a></li>
-        <li>Border example with css <a href="5. cssExample3Borders.html">link</a></li>
-        <li>border-box, Padding and Margin example with css <a href="6. cssExample4PaddingAndMargins.html">link</a></li>
-        <li>Alignment and float <a href="7. cssExample4Align.html">link</a></li>
-        <li>Links, buttons, pseudo selectors <a href="8. cssExampleLinks&Buttons.html">link</a></li>
-        <li>Navigation Menu <a href="9. Navigation Menu.html">link</a></li>
-        <li>CSS Display Property <a href="10. CSS Display Property.html">link</a></li>
-        <li>PROJECT: GYM Website <a href="GYM Website/homePage.html">link</a></li>
-    </ol>
+    <div class="headingContainer">
+        <h1 class="mainHeading">Welcome to my Webpage repository</h1>
+        <p>These are some webpages which I made while I was learning Web Devleopment</p>
+    </div>
+
+
+    <div class="webpages">
+        <h2>Basic Web Pages</h2>
+        <ol class="orderedList"> 
+            <li class="listElements">
+                Basic first page
+                <a class="anchorButton" href="1. firstFile.html">
+                    link
+                </a>
+                <br>
+                <img src="GYM Website/images/firstImage.png" alt="" class="hide">
+            </li>
+            <li class="listElements">
+                First page with css 
+                <a class="anchorButton" href="2. cssExample1.html">
+                    link
+                </a>
+                <br>
+                <img src="GYM Website/images/secondImage.png" alt="" class="hide">
+            </li>
+            <li class="listElements">
+                Colors example with css 
+                <a class="anchorButton" href="4. cssExample2Colors.html">
+                    link
+                </a>
+                <br>
+                <img src="GYM Website/images/thirdImage.png" alt="" class="hide">
+            </li>
+            <li class="listElements">
+                Border example with css 
+                <a class="anchorButton" href="5. cssExample3Borders.html">
+                    link
+                </a>
+                <br>
+                <img src="GYM Website/images/fourthImage.png" alt="" class="hide">
+            </li>
+            <li class="listElements">
+                BorderBox, Padding and Margin example 
+                <a class="anchorButton" href="6. cssExample4PaddingAndMargins.html">
+                    link
+                </a>
+                <br>
+                <img src="GYM Website/images/fifthImage.png" alt="" class="hide">
+            </li>
+            <li class="listElements">
+                Alignment and float 
+                <a class="anchorButton" href="7. cssExample4Align.html">
+                    link
+                </a>
+                <br>
+                <img src="GYM Website/images/sixthImage.png" alt="" class="hide">
+            </li>
+            <li class="listElements">
+                Links, buttons, pseudo selectors 
+                <a class="anchorButton" href="8. cssExampleLinks&Buttons.html">
+                    link
+                </a>
+                <br>
+                <img src="GYM Website/images/seventhImage.png" alt="" class="hide">
+            </li>
+            <li class="listElements">
+                Navigation Menu 
+                <a class="anchorButton" href="9. Navigation Menu.html">
+                    link
+                </a>
+                <br>
+                <img src="GYM Website/images/eighthImage.png" alt="" class="hide">
+            </li>
+            <li class="listElements">
+                CSS Display Property 
+                <a class="anchorButton" href="10. CSS Display Property.html">
+                    link
+                </a>
+                <br>
+                <img src="GYM Website/images/ninthImage.png" alt="" class="hide">
+            </li>
+            
+        </ol>
+    </div>
+    <div class="projects">
+        <h2>Projects</h2>
+        <ol class="orderedList">
+            <li class="listElements">
+                PROJECT: GYM Website 
+                <a class="anchorButton" href="GYM Website/homePage.html">
+                    link
+                </a>
+                <br>
+                <img src="GYM Website/images/tenthImage.png" alt="" class="hide">
+            </li> 
+        </ol>
+    </div>
 </body>
+
 </html>
