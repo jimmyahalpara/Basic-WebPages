@@ -2,13 +2,17 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 body {
     padding: 0px;
     margin: 0px;
     background: url("images/homepageBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 2000px;
+    /* height: 2000px; */
     color: white;
     font-family: 'Fira Sans', sans-serif;
 }
@@ -83,10 +87,116 @@ header {
     background: hsl(0, 0%, 100%, 0.3);
     color: white;
     border: none;
-    border: 2px solid hsl(0, 0%, 100%, 0)
+    border: 2px solid hsl(0, 0%, 100%, 0);
+    cursor: pointer;
 }
 
 .btn:hover {
     background: hsl(0, 0%, 0%, 0.3);
+    border: 2px solid hsl(0, 0%, 100%, 0.8);
+}
+
+.box {
+    background-color: hsl(0, 0%, 0%, 0.3);
+    /* background-color: red; */
+    margin: 100px 10px 10px 0px;
+    padding: 23px;
+    display: inline-block;
+    width: 32%;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.leftContainer {
+    left: 10px;
+    height: 400px;
+}
+
+.midContainer {
+    left: 450px;
+    height: 550px;
+}
+
+.rightContainer {
+    right: 10px;
+    height: 550px;
+}
+
+.formGroup input {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 17px;
+    outline: none;
+    width: 100%;
+    padding: 16px 18px;
+    background-color: hsl(0, 0%, 100%, 0.3);
+    border: 1px solid hsla(0, 0%, 0%, 0);
+    color: white;
+}
+
+.formGroup input:hover {
+    border: 2px solid hsl(0, 0%, 100%, 0.8);
+}
+
+.formGroup input::placeholder {
+    color: hsl(0, 0%, 100%, 0.7);
+}
+
+.formGroup {
+    margin: 10px 10px;
+}
+
+.formGroup .btn {
+    width: 100%;
+}
+
+.midContainer ul {
+    padding: 0px 0px 0px 0px;
+    /* background-color: blue; */
+    overflow: scroll;
+    height: 449px;
+}
+
+.midContainer ul li {
+    list-style: none;
+    background-color: hsl(0, 0%, 100%, 0.3);
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 10px;
+    color: white;
+    height: 40px;
+    overflow: hidden;
+    transition: height 700ms;
+    cursor: pointer;
+}
+
+.midContainer ul li:hover {
+    height: 80px;
+    background-color: hsl(0, 0%, 0%, 0.3);
+    border: 2px solid hsl(0, 0%, 100%, 0.8);
+}
+
+.rightContainer ul {
+    padding: 0px 0px 0px 0px;
+    /* background-color: blue; */
+    overflow: scroll;
+    height: 449px;
+}
+
+.rightContainer ul li {
+    list-style: none;
+    background-color: hsl(0, 0%, 100%, 0.3);
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 10px;
+    color: white;
+    height: 40px;
+    overflow: hidden;
+    transition: height 700ms;
+    cursor: pointer;
+}
+
+.rightContainer ul li:hover {
+    height: 120px;
+    background-color: hsl(0, 0%, 0%, 0.3);
     border: 2px solid hsl(0, 0%, 100%, 0.8);
 }
