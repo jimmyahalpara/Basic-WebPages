@@ -1,0 +1,137 @@
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background-color: rgb(20, 1, 41);
+    color: white;
+}
+
+header h1 {
+    margin: 0px;
+    padding: 14px 37px;
+}
+
+.menu {
+    color: white;
+    position: absolute;
+    background-color: rgb(20, 1, 41);
+    ;
+    width: 250px;
+    height: 602px;
+    overflow: scroll;
+    padding: 0px;
+}
+
+.menuList {
+    list-style: none;
+    padding: 0px;
+}
+
+.listItem a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 10px 12px 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.listItem a:hover {
+    background-color: rgb(54, 0, 180);
+}
+
+.mainContainer {
+    background-color: rgb(252, 252, 149);
+    height: 602px;
+    padding: 20px;
+    position: absolute;
+    top: 65px;
+    left: 250px;
+    overflow: scroll;
+    width: 1115px;
+}
+
+.box {
+    background-color: white;
+    width: 21%;
+    height: 214px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 15px 15px;
+    text-align: center;
+    border: 2px solid rgb(252, 252, 149);
+    border-radius: 20px;
+    transition: 300ms;
+}
+
+.box:hover {
+    border: 2px solid black;
+}
+
+.buttonImage {
+    width: 60%;
+    height: 60%;
+    background-color: red;
+    display: inline-block;
+    /* margin: 10px auto; */
+}
+
+.firstText {
+    font-weight: bold;
+}
+
+.secondText {
+    color: white;
+    height: 100px;
+    padding: 8px 10px;
+    font-weight: bold;
+}
+
+.backRed {
+    background-color: red;
+}
+
+.backYellow {
+    background-color: rgb(207, 176, 0);
+}
+
+.backBlue {
+    background-color: navy;
+}
+
+.backGreen {
+    background-color: green;
+}
+
+table {
+    width: 1000px;
+}
+
+table,
+th,
+tr {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(194, 196, 92);
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(242, 243, 197);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(223, 223, 180);
+}
