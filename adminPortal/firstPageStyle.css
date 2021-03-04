@@ -72,6 +72,7 @@ header h1 {
     border: 2px solid rgb(252, 252, 149);
     border-radius: 20px;
     transition: 300ms;
+    cursor: pointer;
 }
 
 .box:hover {
