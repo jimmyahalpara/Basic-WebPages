@@ -1,0 +1,127 @@
+/* ----------------------------------- */
+
+.bold {
+    font-weight: bold;
+}
+
+.colorRed {
+    color: red
+}
+
+.colorGreen {
+    color: green;
+}
+
+.colorBlue {
+    color: blue;
+}
+
+.colorPurple {
+    color: rgb(160, 0, 160)
+}
+
+.colorYellow {
+    color: yellow;
+}
+
+.colorBrown {
+    color: brown
+}
+
+.backLight {
+    background-color: blanchedalmond;
+}
+
+.backNormal {
+    background-color: rgb(253, 220, 169);
+}
+
+.backDark {
+    background-color: rgb(255, 195, 106);
+}
+
+.tab {
+    tab-size: 10px;
+}
+
+.alignCenter {
+    text-align: center;
+}
+
+
+/* -------------------------------------- */
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    /* background-color: blanchedalmond; */
+    background-color: black;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.noticeBox {
+    padding: 10px 10px;
+    margin: 10px 10px;
+    height: 78px;
+    overflow: hidden;
+    transition: 700ms;
+}
+
+.noticeBox:hover {
+    height: 200px;
+}
+
+.block {
+    background-color: rgb(253, 220, 169);
+    width: 50%;
+    height: 541px;
+    margin: 10px 10px;
+    overflow: scroll;
+    display: inline-block;
+    text-align: justify;
+}
+
+.instructionList {
+    list-style: none;
+    padding: 0px
+}
+
+.listItem {
+    background-color: rgb(255, 195, 106);
+    padding: 10px 10px;
+    margin: 10px 10px 10px 10px;
+    /* height: 33px; */
+    overflow: hidden;
+    /* transition: height 700ms; */
+    max-height: 33px;
+    transition: max-height 0.01s ease-out;
+}
+
+.listItem:hover {
+    max-height: 10000px;
+    transition: max-height 2s ease-in;
+}
+
+.formatBlock {
+    border: 2px solid black;
+    display: inline-block;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    width: 100%;
+}
+
+th {
+    background-color: rgb(255, 167, 35);
+}
+
+tr {
+    background-color: blanchedalmond;
+}
