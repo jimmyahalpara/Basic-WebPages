@@ -28,6 +28,10 @@
     color: brown
 }
 
+.colorIndigo {
+    color: indigo;
+}
+
 .backLight {
     background-color: blanchedalmond;
 }
@@ -76,7 +80,7 @@ body {
 }
 
 .noticeBox:hover {
-    height: 200px;
+    height: 220px;
 }
 
 .block {
@@ -102,7 +106,7 @@ body {
     overflow: hidden;
     /* transition: height 700ms; */
     max-height: 33px;
-    transition: max-height 0.01s ease-out;
+    transition: max-height 0.1s ease-out;
 }
 
 .listItem:hover {

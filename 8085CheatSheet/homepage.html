@@ -18,7 +18,8 @@
         <span class="colorRed bold">R1,R2</span> - General Purpose Registers A,B,C,D,E,H,L<br/>
         <span class="colorGreen bold">M</span> - Memory Location pointed by HL register pair<br/>
         <span class="colorBlue bold">Addr.</span> - 16 bit Address <br>
-        <span class="colorPurple bold">Data</span> - 16 bit Data <br>
+        <span class="colorPurple bold">Data-16</span> - 16 bit Data <br>
+        <spam class="colorIndigo bold">Data-8</spam> - 8 bit data <br>
         <span class="colorYellow bold">Rp</span> - Register Pairs - H(HL), B(BC), D(DE)<br>
         <span class="colorBrown bold">Port</span> - 8 bit port address <br>
     </div>
@@ -29,7 +30,8 @@
 
 
                 <spam class="formatBlock">
-                    <span class="bold">1. MOV <span class="colorRed">R1</span>,<span class="colorRed">R2</span></span> - The contents of <span class="colorRed bold">R2</span> is moved into register
+                    <span class="bold">1. MOV <span class="colorRed">R1</span>,
+                    <span class="colorRed">R2</span></span> - The contents of <span class="colorRed bold">R2</span> is moved into register
                     <spam class="colorRed bold">R1</spam><br>
                     <i>example:-</i><br>
                     <spam class="bold">MOV
@@ -65,7 +67,7 @@
                         <spam class="colorGreen">M</spam>
                     </spam>
                     - Content of Memory Location pointed by Register pair
-                    <spam class="colorYellow bold">HL</spam> is transferred to register
+                    <spam class="colorYellow bold">HL</spam> is transferred into register
                     <spam class="colorRed bold">R1</spam><br>
                     <i>example: -</i><br>
                     <spam class="bold">MOV
@@ -73,20 +75,22 @@
                         <spam class="colorGreen">M</spam>
                     </spam> // assuming content in
                     <spam class="colorYell">HL</spam> is
-                    <spam class="colorBlue bold">2010H</spam>
+                    <spam class="colorPurple bold">2010H</spam>
                     this instructions transfers content of memory location pointed by Register pair
                     <spam class="colorYellow bold">HL</spam>.
-                    <spam class="colorYellow bold">HL</spam> have 2010, so content of memory location
-                    <spam class="colorBlue bold">2010H</spam> will be transferred to register
+                    <spam class="colorYellow bold">HL</spam> have
+                    <spam class="colorPurple bold ">2010H</spam>, so content of memory location
+                    <spam class="colorBlue bold">2010H</spam> will be transferred into register
                     <spam class="colorRed bold">B</spam>
                     <ul>
                         <li class="bold">
-                            <spam class="colorRed bold">B</spam><i class="fa fa-long-arrow-left"></i>[[
-                            <spam class="colorYellow bold">HL</spam>]]
+                            <spam class="colorRed bold">B</spam><i class="fa fa-long-arrow-left">
+                            </i>[[
+                            <spam class="colorYellow bold">HL</spam> ]]
                         </li>
                         <li class="bold">
                             <spam class="colorRed bold">B</spam><i class="fa fa-long-arrow-left"></i>[
-                            <spam class="colorBlue bold">2010H</spam>]
+                            <spam class="colorBlue bold">2010H</spam> ]
                         </li>
                     </ul>
                     <table class="alignCenter">
@@ -112,7 +116,7 @@
                     </spam>
                     - Content of Register
                     <spam class="colorRed bold">R2</spam>
-                    is transferred to memory location pointed by register pair
+                    is transferred into memory location pointed by register pair
                     <spam class="colorYellow bold">HL</spam>
                     <br>
 
@@ -122,27 +126,29 @@
                         <spam class="colorRed">B</spam>
                     </spam> // assuming content in
                     <spam class="colorYell">HL</spam> is
-                    <spam class="colorBlue bold">2010H</spam>, this instruction transfers content of register
-                    <spam class="colorRed bold">B</spam> to memory location pointed by
-                    <spam class="colorYellow bold">HL</spam> register pair.
-                    <spam class="colorYellow">HL</spam> contains 2010, so content of register
-                    <spam class="colorRed bold">B</spam> will be transferred to memory location
-                    <spam class="colorBlue bold">2010H</spam>
+                    <spam class="colorPurple bold">2010H</spam>, this instruction transfers content of register
+                    <spam class="colorRed bold">B</spam> into memory location pointed by
+                    <spam class="colorYellow bold
+                    ">HL</spam> register pair.
+                    <spam class="colorYellow bold">HL</spam> contains
+                    <spam class="colorPurple bold">2010</spam>, so content of register
+                    <spam class="colorRed bold ">B</spam> will be transferred into memory location
+                    <spam class="colorBlue bold ">2010H</spam>
                     <ul>
-                        <li class="bold">
+                        <li class="bold ">
                             [[
-                            <spam class="colorYellow bold">HL</spam>]]
-                            <i class="fa fa-long-arrow-left"></i>
-                            <spam class="colorRed bold">B</spam>
+                            <spam class="colorYellow bold ">HL</spam> ]]
+                            <i class="fa fa-long-arrow-left "></i>
+                            <spam class="colorRed bold ">B</spam>
                         </li>
-                        <li class="bold">
+                        <li class="bold ">
                             [
-                            <spam class="colorBlue bold">2010H</spam>]
-                            <i class="fa fa-long-arrow-left"></i>
-                            <spam class="colorRed bold">B</spam>
+                            <spam class="colorBlue bold ">2010H</spam> ]
+                            <i class="fa fa-long-arrow-left "></i>
+                            <spam class="colorRed bold ">B</spam>
                         </li>
                     </ul>
-                    <table class="alignCenter">
+                    <table class="alignCenter ">
                         <tr>
                             <th>Addr. Mode</th>
                             <th>Flags Affected</th>
@@ -158,9 +164,69 @@
                     </table>
                 </spam>
             </li>
-            <li class="listItem">
-                <spam class="bold">MVI</spam>
+            <li class="listItem ">
+                <spam class="bold ">MVI</spam>
                 <br>Formats: <br>
+
+                <spam class="formatBlock ">
+                    <spam class="bold ">
+                        1. MVI
+                        <spam class="colorRed ">R1</spam>,
+                        <spam class="colorIndigo ">data-8</spam>
+                    </spam>
+                    - The 8 - bit data is immidiately moved into register
+                    <spam class="colorRed bold ">R1</spam>.
+                    <i>Example: </i><br>
+                    <spam class="bold ">
+                        MVI
+                        <spam class="colorRed ">B</spam>
+                        ,
+                        <spam class="colorIndigo ">20H</spam>
+                    </spam>
+                    - data
+                    <spam class="colorIndigo bold ">20H</spam> will be transferred into register
+                    <spam class="colorRed bold ">B</spam>
+                    <ul>
+                        <li class="bold ">
+                            <spam class="colorRed bold ">B</spam>
+                            <i class="fa fa-long-arrow-left "></i>
+                            <spam class="colorIndigo bold ">20H</spam>
+                        </li>
+                    </ul>
+                    <table class="alignCenter ">
+                        <tr>
+                            <th>Addr. Mode</th>
+                            <th>Flags Affected</th>
+                            <th>Cycles</th>
+                            <th>T-States</th>
+                        </tr>
+                        <tr>
+                            <td>Immidiate</td>
+                            <td>None</td>
+                            <td>2</td>
+                            <td>7</td>
+                        </tr>
+                    </table>
+                </spam>
+
+                <spam class="formatBlock ">
+                    <spam class="bold ">
+                        2. MVI
+                        <spam class="colorGreen ">M</spam>,
+                        <span class="colorIndigo ">data-8</span>
+                    </spam>
+                    - 8-bit data immidiately moved into the memory location pointed by
+                    <spam class="colorYellow bold ">HL</spam> (memory pointer)
+                    <i>Example: </i><br>
+                    <spam class="bold ">
+                        MVI
+                        <spam class="colorGreen ">M</spam>,
+                        <spam class="colorIndigo ">data-8</spam>
+                    </spam>
+                    //assuming data in
+                    <spam class="colorYellow bold ">HL</spam> pair is
+                    <spam class="colorPurple bold">2010H</spam>, this instruction will transfer spam
+                </spam>
             </li>
 
         </ul>
