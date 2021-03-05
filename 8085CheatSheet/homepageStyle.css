@@ -4,32 +4,42 @@
     font-weight: bold;
 }
 
-.colorRed {
+.colorRegister {
     color: red
 }
 
-.colorGreen {
+.colorMemory {
     color: green;
 }
 
-.colorBlue {
+.colorAddress {
     color: blue;
 }
 
-.colorPurple {
+.colorData16 {
     color: rgb(160, 0, 160)
 }
 
-.colorYellow {
+.colorRegisterPair {
     color: yellow;
 }
 
-.colorBrown {
+.colorPort {
     color: brown
 }
 
-.colorIndigo {
+.colorData8 {
     color: indigo;
+}
+
+.colorAddress,
+.colorData16,
+.colorData8,
+.colorMemory,
+.colorPort,
+.colorRegister,
+.colorRegisterPair {
+    font-weight: bold;
 }
 
 .backLight {
@@ -128,4 +138,8 @@ th {
 
 tr {
     background-color: blanchedalmond;
+}
+
+.block h3 {
+    padding-left: 10px;
 }

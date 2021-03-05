@@ -15,34 +15,35 @@
 <body>
     <div class="noticeBox backDark">
         <h2>Notations</h2>
-        <span class="colorRed bold">R1,R2</span> - General Purpose Registers A,B,C,D,E,H,L<br/>
-        <span class="colorGreen bold">M</span> - Memory Location pointed by HL register pair<br/>
-        <span class="colorBlue bold">Addr.</span> - 16 bit Address <br>
-        <span class="colorPurple bold">Data-16</span> - 16 bit Data <br>
-        <spam class="colorIndigo bold">Data-8</spam> - 8 bit data <br>
-        <span class="colorYellow bold">Rp</span> - Register Pairs - H(HL), B(BC), D(DE)<br>
-        <span class="colorBrown bold">Port</span> - 8 bit port address <br>
+        <span class="colorRegister">R1,R2</span> - General Purpose Registers A,B,C,D,E,H,L<br/>
+        <span class="colorMemory">M</span> - Memory Location pointed by HL register pair<br/>
+        <span class="colorAddress">Addr.</span> - 16 bit Address <br>
+        <span class="colorData16">Data-16</span> - 16 bit Data <br>
+        <spam class="colorData8">Data-8</spam> - 8 bit data <br>
+        <span class="colorRegisterPair">Rp</span> - Register Pairs - H(HL), B(BC), D(DE)<br>
+        <span class="colorPort">Port</span> - 8 bit port address <br>
     </div>
     <div class="arithmetic block">
+        <h3 class="bold">Arithmetic Instruction set</h3>
         <ul class="instructionList">
             <li class="listItem"><span class="bold">MOV</span>
-                <br> Formates: <br>
+                <br> Forms: <br>
 
 
                 <spam class="formatBlock">
-                    <span class="bold">1. MOV <span class="colorRed">R1</span>,
-                    <span class="colorRed">R2</span></span> - The contents of <span class="colorRed bold">R2</span> is moved into register
-                    <spam class="colorRed bold">R1</spam><br>
+                    <span class="bold">1. MOV <span class="colorRegister">R1</span>,
+                    <span class="colorRegister">R2</span></span> - The contents of <span class="colorRegister">R2</span> is moved into register
+                    <spam class="colorRegister">R1</spam><br>
                     <i>example:-</i><br>
                     <spam class="bold">MOV
-                        <spam class="colorRed">B</spam>,
-                        <spam class="colorRed">E</spam> :
+                        <spam class="colorRegister">B</spam>,
+                        <spam class="colorRegister">E</spam> :
                     </spam>
                     Transfers data from Register E to B. Here Transfers means copying, not cutting.
                     <ul>
                         <li>
-                            <spam class="colorRed bold">B</spam><i class="fa fa-long-arrow-left"></i>
-                            <spam class="colorRed bold">E</spam>
+                            <spam class="colorRegister">B</spam><i class="fa fa-long-arrow-left"></i>
+                            <spam class="colorRegister">E</spam>
                         </li>
                     </ul>
                     <table class="alignCenter">
@@ -51,46 +52,49 @@
                             <th>Flags Affected</th>
                             <th>Cycles</th>
                             <th>T-States</th>
+                            <th>Bytes</th>
                         </tr>
                         <tr>
                             <td>Register</td>
                             <td>None</td>
                             <td>1</td>
                             <td>4</td>
+                            <td>1</td>
+
                         </tr>
                     </table>
                 </spam>
 
                 <spam class="formatBlock">
                     <spam class="bold">2. MOV
-                        <spam class="colorRed">R1</spam>,
-                        <spam class="colorGreen">M</spam>
+                        <spam class="colorRegister">R1</spam>,
+                        <spam class="colorMemory">M</spam>
                     </spam>
                     - Content of Memory Location pointed by Register pair
-                    <spam class="colorYellow bold">HL</spam> is transferred into register
-                    <spam class="colorRed bold">R1</spam><br>
+                    <spam class="colorRegisterPair">HL</spam> is transfered into register
+                    <spam class="colorRegister">R1</spam><br>
                     <i>example: -</i><br>
                     <spam class="bold">MOV
-                        <spam class="colorRed">B</spam>,
-                        <spam class="colorGreen">M</spam>
+                        <spam class="colorRegister">B</spam>,
+                        <spam class="colorMemory">M</spam>
                     </spam> // assuming content in
                     <spam class="colorYell">HL</spam> is
-                    <spam class="colorPurple bold">2010H</spam>
+                    <spam class="colorData16">2010H</spam>
                     this instructions transfers content of memory location pointed by Register pair
-                    <spam class="colorYellow bold">HL</spam>.
-                    <spam class="colorYellow bold">HL</spam> have
-                    <spam class="colorPurple bold ">2010H</spam>, so content of memory location
-                    <spam class="colorBlue bold">2010H</spam> will be transferred into register
-                    <spam class="colorRed bold">B</spam>
+                    <spam class="colorRegisterPair">HL</spam>.
+                    <spam class="colorRegisterPair">HL</spam> have
+                    <spam class="colorData16 ">2010H</spam>, so content of memory location
+                    <spam class="colorAddress">2010H</spam> will be transferred into register
+                    <spam class="colorRegister">B</spam>
                     <ul>
                         <li class="bold">
-                            <spam class="colorRed bold">B</spam><i class="fa fa-long-arrow-left">
+                            <spam class="colorRegister">B</spam><i class="fa fa-long-arrow-left">
                             </i>[[
-                            <spam class="colorYellow bold">HL</spam> ]]
+                            <spam class="colorRegisterPair">HL</spam> ]]
                         </li>
                         <li class="bold">
-                            <spam class="colorRed bold">B</spam><i class="fa fa-long-arrow-left"></i>[
-                            <spam class="colorBlue bold">2010H</spam> ]
+                            <spam class="colorRegister">B</spam><i class="fa fa-long-arrow-left"></i>[
+                            <spam class="colorAddress">2010H</spam> ]
                         </li>
                     </ul>
                     <table class="alignCenter">
@@ -99,53 +103,55 @@
                             <th>Flags Affected</th>
                             <th>Cycles</th>
                             <th>T-States</th>
+                            <th>Bytes</th>
                         </tr>
                         <tr>
                             <td>Indirect</td>
                             <td>None</td>
                             <td>2</td>
                             <td>7</td>
+                            <td>1</td>
                         </tr>
                     </table>
                 </spam>
 
                 <spam class="formatBlock">
                     <spam class="bold">3. MOV
-                        <spam class="colorGreen">M</spam>,
-                        <spam class="colorRed">R2</spam>
+                        <spam class="colorMemory">M</spam>,
+                        <spam class="colorRegister">R2</spam>
                     </spam>
                     - Content of Register
-                    <spam class="colorRed bold">R2</spam>
+                    <spam class="colorRegister">R2</spam>
                     is transferred into memory location pointed by register pair
-                    <spam class="colorYellow bold">HL</spam>
+                    <spam class="colorRegisterPair">HL</spam>
                     <br>
 
                     <i>example: -</i><br>
                     <spam class="bold">MOV
-                        <spam class="colorGreen">M</spam>,
-                        <spam class="colorRed">B</spam>
+                        <spam class="colorMemory">M</spam>,
+                        <spam class="colorRegister">B</spam>
                     </spam> // assuming content in
                     <spam class="colorYell">HL</spam> is
-                    <spam class="colorPurple bold">2010H</spam>, this instruction transfers content of register
-                    <spam class="colorRed bold">B</spam> into memory location pointed by
-                    <spam class="colorYellow bold
+                    <spam class="colorData16">2010H</spam>, this instruction transfers content of register
+                    <spam class="colorRegister">B</spam> into memory location pointed by
+                    <spam class="colorRegisterPair
                     ">HL</spam> register pair.
-                    <spam class="colorYellow bold">HL</spam> contains
-                    <spam class="colorPurple bold">2010</spam>, so content of register
-                    <spam class="colorRed bold ">B</spam> will be transferred into memory location
-                    <spam class="colorBlue bold ">2010H</spam>
+                    <spam class="colorRegisterPair">HL</spam> contains
+                    <spam class="colorData16">2010</spam>, so content of register
+                    <spam class="colorRegister ">B</spam> will be transferred into memory location
+                    <spam class="colorAddress ">2010H</spam>
                     <ul>
                         <li class="bold ">
                             [[
-                            <spam class="colorYellow bold ">HL</spam> ]]
+                            <spam class="colorRegisterPair ">HL</spam> ]]
                             <i class="fa fa-long-arrow-left "></i>
-                            <spam class="colorRed bold ">B</spam>
+                            <spam class="colorRegister ">B</spam>
                         </li>
                         <li class="bold ">
                             [
-                            <spam class="colorBlue bold ">2010H</spam> ]
+                            <spam class="colorAddress ">2010H</spam> ]
                             <i class="fa fa-long-arrow-left "></i>
-                            <spam class="colorRed bold ">B</spam>
+                            <spam class="colorRegister ">B</spam>
                         </li>
                     </ul>
                     <table class="alignCenter ">
@@ -154,43 +160,46 @@
                             <th>Flags Affected</th>
                             <th>Cycles</th>
                             <th>T-States</th>
+                            <th>Bytes</th>
                         </tr>
                         <tr>
                             <td>Register</td>
                             <td>None</td>
                             <td>2</td>
                             <td>7</td>
+                            <td>1</td>
+
                         </tr>
                     </table>
                 </spam>
             </li>
             <li class="listItem ">
                 <spam class="bold ">MVI</spam>
-                <br>Formats: <br>
+                <br>Forms: <br>
 
                 <spam class="formatBlock ">
                     <spam class="bold ">
                         1. MVI
-                        <spam class="colorRed ">R1</spam>,
-                        <spam class="colorIndigo ">data-8</spam>
+                        <spam class="colorRegister ">R1</spam>,
+                        <spam class="colorData8 ">data-8</spam>
                     </spam>
                     - The 8 - bit data is immidiately moved into register
-                    <spam class="colorRed bold ">R1</spam>.
+                    <spam class="colorRegister ">R1</spam>.
                     <i>Example: </i><br>
                     <spam class="bold ">
                         MVI
-                        <spam class="colorRed ">B</spam>
+                        <spam class="colorRegister ">B</spam>
                         ,
-                        <spam class="colorIndigo ">20H</spam>
+                        <spam class="colorData8 ">20H</spam>
                     </spam>
                     - data
-                    <spam class="colorIndigo bold ">20H</spam> will be transferred into register
-                    <spam class="colorRed bold ">B</spam>
+                    <spam class="colorData8 ">20H</spam> will be transferred into register
+                    <spam class="colorRegister ">B</spam>
                     <ul>
                         <li class="bold ">
-                            <spam class="colorRed bold ">B</spam>
+                            <spam class="colorRegister ">B</spam>
                             <i class="fa fa-long-arrow-left "></i>
-                            <spam class="colorIndigo bold ">20H</spam>
+                            <spam class="colorData8 ">20H</spam>
                         </li>
                     </ul>
                     <table class="alignCenter ">
@@ -199,12 +208,14 @@
                             <th>Flags Affected</th>
                             <th>Cycles</th>
                             <th>T-States</th>
+                            <th>Bytes</th>
                         </tr>
                         <tr>
                             <td>Immidiate</td>
                             <td>None</td>
                             <td>2</td>
                             <td>7</td>
+                            <td>2</td>
                         </tr>
                     </table>
                 </spam>
@@ -212,23 +223,209 @@
                 <spam class="formatBlock ">
                     <spam class="bold ">
                         2. MVI
-                        <spam class="colorGreen ">M</spam>,
-                        <span class="colorIndigo ">data-8</span>
+                        <spam class="colorMemory ">M</spam>,
+                        <span class="colorData8 ">data-8</span>
                     </spam>
                     - 8-bit data immidiately moved into the memory location pointed by
-                    <spam class="colorYellow bold ">HL</spam> (memory pointer)
+                    <spam class="colorRegisterPair ">HL</spam> (memory pointer) <br>
                     <i>Example: </i><br>
                     <spam class="bold ">
                         MVI
-                        <spam class="colorGreen ">M</spam>,
-                        <spam class="colorIndigo ">data-8</spam>
+                        <spam class="colorMemory ">M</spam>,
+                        <spam class="colorData8 ">20H</spam>
                     </spam>
                     //assuming data in
-                    <spam class="colorYellow bold ">HL</spam> pair is
-                    <spam class="colorPurple bold">2010H</spam>, this instruction will transfer spam
+                    <spam class="colorRegisterPair ">HL</spam> pair is
+                    <spam class="colorData16">2010H</spam>, this instruction will transfer data
+                    <spam class="colorData8">20H</spam> to memory location pointed by
+                    <spam class="colorRegisterPair">HL</spam>.
+                    <spam class="colorRegisterPair">HL</spam> register pair have data
+                    <spam class="colorData16">2010H</spam>, so
+                    <spam class="colorData8">20H</spam> will be transfered to memory location
+                    <spam class="colorAddress">2010H</spam> <br>
+                    <ul>
+                        <li class="bold ">
+                            <spam class="colorMemory">M</spam>
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            <spam class="colorData8">20H</spam>
+                        </li>
+                        <li class="bold">
+                            [[
+                            <spam class="colorRegisterPair">HL</spam> ]]
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            <spam class="colorData8">20H</spam>
+                        </li>
+                        <li class="bold">
+                            [
+                            <spam class="colorAddress">2018H</spam> ]
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            <spam class="colorData8">20H</spam>
+                        </li>
+                    </ul>
+                    <table class="alignCenter ">
+                        <tr>
+                            <th>Addr. Mode</th>
+                            <th>Flags Affected</th>
+                            <th>Cycles</th>
+                            <th>T-States</th>
+                            <th>Bytes</th>
+                        </tr>
+                        <tr>
+                            <td>Immidiate</td>
+                            <td>None</td>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>2</td>
+                        </tr>
+                    </table>
                 </spam>
             </li>
 
+            <li class="listItem">
+                <spam class="bold">LXI</spam><br> Forms:
+                <spam class="formatBlock">
+                    <spam class="bold">
+                        1. LXI
+                        <spam class="colorRegisterPair">Rp</spam>,
+                        <spam class="colorData16">data-16</spam>
+                    </spam>
+                    - The
+                    <spam class="colorData16">16 - bit data</spam>
+                    is immidiately moved into the
+                    <spam class="colorRegisterPair">Rp</spam>
+                    register pair specified in the instruction. Registor pairs can be
+                    <spam class="colorRegisterPair">HL - H</spam>,
+                    <spam class="colorRegisterPair">BC - B</spam>,
+                    <spam class="colorRegisterPair">DE - D</spam>
+                    <i>Example: </i><br>
+                    <spam class="bold">
+                        LXI
+                        <spam class="colorRegisterPair">D</spam>,
+                        <spam class="colorData16">2910H</spam>
+                    </spam>
+                    - data
+                    <spam class="colorData16">2910H</spam>
+                    is immidiately moved to
+                    <spa class="colorRegisterPair">DE</spa>
+                    register pair.
+                    <ul>
+                        <li>
+                            <spam class="colorRegisterPair">HL</spam>
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            <spam class="colorData16">2910H</spam>
+                        </li>
+                    </ul>
+                    <table class="alignCenter ">
+                        <tr>
+                            <th>Addr. Mode</th>
+                            <th>Flags Affected</th>
+                            <th>Cycles</th>
+                            <th>T-States</th>
+                            <th>Bytes</th>
+                        </tr>
+                        <tr>
+                            <td>Immidiate</td>
+                            <td>None</td>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </spam>
+            </li>
+
+            <li class="listItem">
+                <spam class="bold">
+                    LDA
+                </spam><br> Forms
+                <spam class="formatBlock">
+                    <spam class="bold">
+                        1. LDA
+                    </spam>
+                    <spam class="colorAddress">Addr.</spam>
+                    - The accumulator is loaded with the contents from the memory location having given
+                    <spam class="colorAddress">address</spam><br>
+                    <i>Example: </i><br>
+                    <spam class="bold">
+                        LDA
+                        <spam class="colorAddress">2019H</spam>
+                    </spam>
+                    - content from memory location
+                    <spam class="colorAddress">2019H</spam> is loaded into accumulator.
+                    <ul>
+                        <li class="bold">
+                            <spam class="colorRegister">A</spam>
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            [
+                            <spam class="colorAddress">2019H</spam> ]
+                        </li>
+                    </ul>
+
+                    <table class="alignCenter ">
+                        <tr>
+                            <th>Addr. Mode</th>
+                            <th>Flags Affected</th>
+                            <th>Cycles</th>
+                            <th>T-States</th>
+                            <th>Bytes</th>
+                        </tr>
+                        <tr>
+                            <td>Direct</td>
+                            <td>None</td>
+                            <td>4</td>
+                            <td>13</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </spam>
+            </li>
+
+            <li class="listItem">
+                <spam class="bold">
+                    STA
+                </spam><br> Forms
+                <spam class="formatBlock">
+                    <spam class="bold">
+                        1. STA
+                    </spam>
+                    <spam class="colorAddress">Addr.</spam>
+                    - Contents from accumulator is stored into momory with location
+                    <spam class="colorAddress">address</spam><br>
+                    <i>Example: </i><br>
+                    <spam class="bold">
+                        STA
+                        <spam class="colorAddress">2019H</spam>
+                    </spam>
+                    - content from accumulator is stored in memory with location
+                    <spam class="colorAddress">2019H</spam>
+                    <ul>
+                        <li class="bold">
+                            [
+                            <spam class="colorAddress">2019H</spam> ]
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            <spam class="colorRegister">A</spam>
+
+                        </li>
+                    </ul>
+
+                    <table class="alignCenter ">
+                        <tr>
+                            <th>Addr. Mode</th>
+                            <th>Flags Affected</th>
+                            <th>Cycles</th>
+                            <th>T-States</th>
+                            <th>Bytes</th>
+                        </tr>
+                        <tr>
+                            <td>Direct</td>
+                            <td>None</td>
+                            <td>4</td>
+                            <td>13</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </spam>
+            </li>
         </ul>
     </div>
 
