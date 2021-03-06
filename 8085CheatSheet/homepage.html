@@ -426,6 +426,170 @@
                     </table>
                 </spam>
             </li>
+
+            <li class="listItem">
+                <spam class="bold">
+                    LHLD
+                </spam> <br> Forms. <br>
+                <spam class="formatBlock">
+                    <spam class="bold">
+                        1. LHLD
+                        <spam class="colorAddress">Addr.</spam>
+                    </spam>
+                    - The
+                    <spam class="colorRegisterPair">HL</spam>
+                    pari is loaded with the contents of the locations pointed by the given
+                    <spam class="colorAddress">addr</spam>
+                    and
+                    <spam class="colorAddress">addr. + 1</spam><br>
+                    <i>Example:</i><br>
+                    <spam class="bold">
+                        LHLD
+                        <spam class="colorAddress">2019H</spam>
+                    </spam>
+                    - contents of location pointed by address
+                    <spam class="colorAddress">2019H</spam>
+                    will be transfered to register
+                    <spam class="colorRegister">L</spam>
+                    and contents of location pointed by address
+                    <spam class="colorAddress">2020H (2019H + 1)</spam>
+                    will be transferred to register
+                    <spam class="colorRegister">H</spam><br>
+                    <ul class="bold">
+                        <li>
+                            <spam class="colorRegister">L</spam>
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            [
+                            <spam class="colorAddress">2019H</spam> ] &
+                            <spam class="colorRegister">H</spam>
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            [
+                            <spam class="colorAddress">2020H</spam> ]
+                        </li>
+                    </ul>
+
+                    <table class="alignCenter ">
+                        <tr>
+                            <th>Addr. Mode</th>
+                            <th>Flags Affected</th>
+                            <th>Cycles</th>
+                            <th>T-States</th>
+                            <th>Bytes</th>
+                        </tr>
+                        <tr>
+                            <td>Direct</td>
+                            <td>None</td>
+                            <td>5</td>
+                            <td>16</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </spam>
+            </li>
+
+            <li class="listItem">
+                <spam class="bold">
+                    SHLD
+                </spam> <br> Forms. <br>
+                <spam class="formatBlock">
+                    <spam class="bold">
+                        1. LHLD
+                        <spam class="colorAddress">Addr.</spam>
+                    </spam>
+                    - The content of
+                    <spam class="colorRegisterPair">HL</spam>
+                    pari is transferred to memory locations pointed by the given
+                    <spam class="colorAddress">addr</spam>
+                    and
+                    <spam class="colorAddress">addr. + 1</spam><br>
+                    <i>Example:</i><br>
+                    <spam class="bold">
+                        SHLD
+                        <spam class="colorAddress">2019H</spam>
+                    </spam>
+                    - contents of
+                    <spam class="colorRegister">L</spam>
+                    will be transferred to memory location pointed by address
+                    <spam class="colorAddress">2019H</spam>
+                    and contents of
+                    <spam class="colorRegister">H</spam>
+                    will be transferred to memory location pointed by address
+                    <spam class="colorAddress">2020H</spam>
+                    <ul class="bold">
+                        <li>
+                            [
+                            <spam class="colorAddress">2019H</spam> ]
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            <spam class="colorRegister">L</spam>
+                            & [
+                            <spam class="colorAddress">2020H</spam> ]
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            <spam class="colorRegister">H</spam>
+                        </li>
+                    </ul>
+
+                    <table class="alignCenter ">
+                        <tr>
+                            <th>Addr. Mode</th>
+                            <th>Flags Affected</th>
+                            <th>Cycles</th>
+                            <th>T-States</th>
+                            <th>Bytes</th>
+                        </tr>
+                        <tr>
+                            <td>Direct</td>
+                            <td>None</td>
+                            <td>5</td>
+                            <td>16</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+                </spam>
+            </li>
+
+            <li class="listItem">
+                <spam class="bold">
+                    LDAX
+                </spam>
+                <br> Forms:
+                <spam class="formatBlock">
+                    <spam class="bold">
+                        1. LDAX
+                    </spam>
+                    <spam class="colorRegisterPair">Rp</spam> - The accumulator is loaded with the memory location pointed by value of the given
+                    <spam class="colorRegisterPair">Register pair</spam><br>
+                    <i>Example</i><br>
+                    <spam class="bold">
+                        LDAX
+                        <spam class="colorRegisterPair">
+                            B
+                        </spam>
+                    </spam>
+                    // assuming data in
+                    <spam class="colorRegisterPair">BC</spam>
+                    register pair is
+                    <spam class="colorData16">1010H</spam>. content from memory location
+                    <spam class="colorAddress">1010H</spam>
+                    will be transferred into accumulator <br>
+                    <ul class="bold">
+                        <li>
+                            <spam class="colorRegister">A</spam>
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            [[
+                            <spam class="colorRegisterPair">BC</spam> ]]
+                        </li>
+                        <li>
+                            <spam class="colorRegister">A</spam>
+                            <spam class="fa fa-long-arrow-left"></spam>
+                            [
+                            <spam class="colorAddress">1010H</spam> ]
+                        </li>
+                    </ul>
+                    <i>Note: Register pair here cannot be 
+                        <spam class="colorRegisterPair">HL</spam>
+                    </i>
+                </spam>
+            </li>
         </ul>
     </div>
 
