@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box </title>
+    <style>
+        .container {
+            height: fit-content;
+            width: 100%;
+            border: 2px solid black;
+            /* initialize the container as flex box  */
+            display: flex;
+            /* flex properties */
+            /* default row */
+            /* flex-direction: row; */
+            /* flex-wrap: wrap; */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+        
+        .item {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 2px solid red;
+            margin: 10px;
+            padding: 3px;
+        }
+        
+        #item-1 {
+            /* higher the order, the later it will be shown */
+            /* order: 2; */
+            flex-grow: 1;
+        }
+        
+        #item-2 {
+            flex-grow: 1;
+            /* flex-shrink: 2; */
+        }
+        
+        #item-3 {
+            /* flex-shrink: 3; */
+            /* when flex-direction is set to row, flex-basis will control width */
+            /* when flex-directino is set to column, flex basis will control height */
+            /* flex-basis: 320px; */
+            /* flex: <flex-grow> <flex-shrink> <flex-basis> */
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        This is flex box
+    </h1>
+    <div class="container">
+        <div class="item" id="item-1">First BOx </div>
+        <div class="item" id="item-2">Second Box </div>
+        <div class="item" id="item-3">Third Box </div>
+        <!-- <div class="item" id="item-4">Fourth Box </div>
+        <div class="item" id="item-5">Fifth Box</div>
+        <div class="item" id="item-6">Sixth Box</div> -->
+    </div>
+</body>
+
+</html>
