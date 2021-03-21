@@ -40,6 +40,9 @@ body {
 
 .orderedList {
     list-style-type: none;
+    /* background-color: red; */
+    height: 70vh;
+    overflow: scroll;
 }
 
 .listElements {
@@ -79,11 +82,13 @@ body {
     background-color: hsla(0, 0%, 0%, 0.6);
 }
 
+
 /* width */
+
 ::-webkit-scrollbar {
     width: 0px;
-  }
-  
+}
+
 .listElements .hide {
     display: inline-block;
     width: 450px;
