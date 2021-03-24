@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and after pseudo selector</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            color: white;
+            font-family: 'Syne Mono', monospace;
+        }
+        
+        header::before {
+            content: "";
+            background: url('https://source.unsplash.com/random') no-repeat center center/cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        .navigation {
+            display: flex;
+            text-decoration: none;
+            list-style: none;
+        }
+        
+        li {
+            padding: 34px 23px;
+        }
+        
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h3 {
+            font-size: 4rem;
+        }
+        /* section::before {
+            content: "This is content";
+        }
+        
+        section::after {
+            content: "This is content";
+        } */
+        
+        section {
+            /* margin: 10px 10px; */
+            padding: 10px 130px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact Us</li>
+            </ul>
+        </nav>
+        <section>
+            <h3>Welcome to coding world </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maxime aut at facilis, minima pariatur inventore atque alias repellendus, dolores impedit corrupti iusto accusamus optio quidem nobis magni illum sed, ea expedita.</p>
+        </section>
+    </header>
+</body>
+
+</html>

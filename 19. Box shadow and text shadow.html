@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and text shadow</title>
+    <style>
+        .container {
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+        
+        .card {
+            padding: 23px 12px;
+            margin: 23px 12px;
+            /* border: 2px solid red; */
+            /* width: 300px; */
+            background-color: burlywood;
+            /* box-shadow <inset> x y blur-radius spread-radius color , multiple shadows*/
+            box-shadow: 7px 5px 3px 5px green;
+        }
+        
+        .card h2 {
+            text-shadow: 2px 2px 2px green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>Card1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ab nulla nam quis, at consequatur voluptatibus laboriosam perspiciatis similique ducimus obcaecati est, blanditiis eligendi, debitis recusandae nesciunt numquam facere labore
+                aut dignissimos eum. Iure!</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>Card2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ab nulla nam quis, at consequatur voluptatibus laboriosam perspiciatis similique ducimus obcaecati est, blanditiis eligendi, debitis recusandae nesciunt numquam facere labore
+                aut dignissimos eum. Iure!</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ab nulla nam quis, at consequatur voluptatibus laboriosam perspiciatis similique ducimus obcaecati est, blanditiis eligendi, debitis recusandae nesciunt numquam facere labore
+                aut dignissimos eum. Iure!</p>
+        </div>
+        <div class="card" id="card-4">
+            <h2>Card4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ab nulla nam quis, at consequatur voluptatibus laboriosam perspiciatis similique ducimus obcaecati est, blanditiis eligendi, debitis recusandae nesciunt numquam facere labore
+                aut dignissimos eum. Iure!</p>
+        </div>
+    </div>
+</body>
+
+</html>
