@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations and keyframes</title>
+    <style>
+        .container {
+            background-color: greenyellow;
+        }
+        
+        .box {
+            background-color: green;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            /* animation-name: jimmy2; */
+            /* animation-duration: 2s; */
+            /* animation-iteration-count: 3; */
+            /* animation-fill-mode: forwards; */
+            /* animation-timing-function: ease-in-out; */
+            /* animation-delay: 2s; */
+            /* animation-direction: reverse; */
+            /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode */
+            animation: jimmy2 2s 3;
+        }
+        
+        @keyframes jimmy2 {
+            0% {
+                background-color: red;
+                top: 0px;
+                left: 0px;
+            }
+            25% {
+                background-color: orange;
+                top: 250px;
+                left: 0px;
+            }
+            50% {
+                background-color: yellow;
+                top: 250px;
+                left: 250px;
+            }
+            75% {
+                background-color: yellowgreen;
+                top: 0px;
+                left: 250px;
+            }
+            100% {
+                background-color: green;
+                top: 0px;
+                left: 0px;
+            }
+        }
+        
+        @keyframes jimmy1 {
+            from {
+                width: 200px;
+            }
+            to {
+                width: 700px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+
+</html>
