@@ -6,6 +6,10 @@
     /* background-color: black; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'New Tegomin', serif;
 }
@@ -16,6 +20,10 @@ body {
 #navbar {
     display: flex;
     align-items: center;
+    top: 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
 }
 
 #navbar::before {
@@ -26,6 +34,7 @@ body {
     width: 100%;
     z-index: -1;
     opacity: 0.4;
+    /* position: sticky; */
 }
 
 
@@ -44,12 +53,6 @@ body {
 
 
 /* Navitation bar: List styling  */
-
-#navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
 
 #navbar ul {
     display: flex;
