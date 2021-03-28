@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanning multiple rows and columns in GRID</title>
+    <style>
+        .container {
+            display: grid;
+            /* grid-template-columns: 1fr 3fr 3fr; */
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            /* grid-column-gap: 4rem;
+            grid-row-gap: 2rem; */
+            grid-gap: 2rem;
+        }
+        
+        .box {
+            border: 2px solid black;
+            background-color: rgb(182, 24, 182);
+        }
+        
+        .box:first-child {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            /* grid-column: 1 / spam 3; */
+            /* grid-row: 1 / spam 3; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+        <div class="box">Item-7</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-8</div>
+    </div>
+</body>
+
+</html>

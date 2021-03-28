@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Layouts using Grid Template Area</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 'navbar navbar navbar navbar' 'section section section aside' 'footer footer footer footer';
+        }
+        
+        .item {
+            background-color: yellow;
+            border: 2px solid black;
+        }
+        
+        #navbar {
+            grid-area: navbar;
+        }
+        
+        #section {
+            grid-area: section;
+        }
+        
+        #aside {
+            grid-area: aside;
+        }
+        
+        footer {
+            grid-area: footer;
+        }
+        
+        @media only screen and (max-width: 300px) {
+            body {
+                background-color: red;
+            }
+        }
+        
+        @media only screen and (min-width: 300px) and (max-width: 500px) {
+            body {
+                background-color: green;
+            }
+        }
+        
+        @media only screen and (min-width: 500px) and (max-width: 800px) {
+            body {
+                background-color: yellow;
+            }
+            .container {
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas: 'navbar navbar navbar navbar' 'section section section section' 'aside aside aside aside' 'footer footer footer footer';
+            }
+        }
+        
+        @media only screen and (min-width: 800px) {
+            body {
+                background-color: blue;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="item">
+            Home COntactUS Client Services AboutUS
+        </div>
+        <div id="section" class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio asperiores quibusdam, a eius, voluptatum id blanditiis temporibus, quae ipsam explicabo itaque fuga officiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique unde
+            modi beatae eveniet animi, nobis nulla ipsum quis recusandae quidem incidunt necessitatibus molestias nesciunt non, soluta quas, ab reiciendis dignissimos.
+        </div>
+        <div id="aside" class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit amet doloremque ad. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae ipsum corporis in vel possimus neque eum, nostrum sint magni?
+        </div>
+
+        <footer class="item">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta asperiores doloribus cum quo, voluptate necessitatibus cupiditate odit et quidem atque.
+        </footer>
+
+    </div>
+</body>
+
+</html>
