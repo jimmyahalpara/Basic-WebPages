@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Functions</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            This is a heading
+        </h1>
+        <div class="content">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus suscipit voluptates atque harum, est reprehenderit beatae libero excepturi quidem saepe culpa iste veritatis quod cupiditate, veniam dolor amet quibusdam, sed nostrum ducimus fuga
+                ipsa.
+
+            </p>
+        </div>
+    </div>
+    <script>
+        var s = " This is a string  ";
+        console.log(s);
+        // first occurance of substring
+        var position = s.indexOf("is");
+        console.log(position);
+        // last occurance of substirng
+        console.log(s.lastIndexOf("is"));
+        // slicing 
+        console.log(s.slice(-2, ));
+        // substring cannot take negative values 
+        console.log(s.substring(0, 3));
+        // Substr - 5 characters from 2 position
+        console.log(s.substr(2, 5));
+        console.log(s.replace("string", "jimmy"));
+        console.log(s.toUpperCase());
+        console.log(s.toLocaleLowerCase());
+        console.log(s.concat("New String"));
+        console.log(s.trim());
+        console.log(s.charAt(2));
+        console.log(s.charCodeAt(2));
+        console.log(s[5]);
+    </script>
+</body>
+
+</html>
