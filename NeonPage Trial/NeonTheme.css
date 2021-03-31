@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    font-family: consolas;
+}
+
+
+/* ---------------------- SPIRAL AND GLOW - BLUE-------------------*/
+
+
+/* TO use, inside an anchor, keep 4 span before text data, something like this 
+<a href="#" class="spiral-and-glow-anchor-blue">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span> Neon Button
+    </a> */
+
+.spiral-and-glow-anchor-blue {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.1s;
+}
+
+.spiral-and-glow-anchor-blue:hover {
+    color: #255784;
+    background-color: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0.5s;
+}
+
+.spiral-and-glow-anchor-blue span {
+    position: absolute;
+    display: block;
+}
+
+.spiral-and-glow-anchor-blue span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f4);
+}
+
+.spiral-and-glow-anchor-blue:hover span:nth-child(1) {
+    left: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+}
+
+.spiral-and-glow-anchor-blue span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #2196f4);
+}
+
+.spiral-and-glow-anchor-blue:hover span:nth-child(3) {
+    right: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+    /* transition-delay: 0.5s; */
+    transition-delay: 0.25s;
+}
+
+.spiral-and-glow-anchor-blue span:nth-child(2) {
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #2196f4);
+}
+
+.spiral-and-glow-anchor-blue:hover span:nth-child(2) {
+    top: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+    transition-delay: 0.125s;
+}
+
+.spiral-and-glow-anchor-blue span:nth-child(4) {
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f4);
+}
+
+.spiral-and-glow-anchor-blue:hover span:nth-child(4) {
+    bottom: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+    /* transition-delay: 0.75s; */
+    transition-delay: 0.375s;
+}
+
+
+/* ---------------------- SPIRAL AND GLOW - GREEN-------------------*/
+
+
+/* TO use, inside an anchor, keep 4 span before text data, something like this 
+<a href="#" class="spiral-and-glow-anchor-blue">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span> Neon Button
+    </a> */
+
+.spiral-and-glow-anchor-green {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #3af321;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.1s;
+}
+
+.spiral-and-glow-anchor-green:hover {
+    color: #25842a;
+    background-color: #3af321;
+    box-shadow: 0 0 10px #3af321, 0 0 40px #3af321, 0 0 80px #3af321;
+    transition-delay: 0.5s;
+}
+
+.spiral-and-glow-anchor-green span {
+    position: absolute;
+    display: block;
+}
+
+.spiral-and-glow-anchor-green span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3af321);
+}
+
+.spiral-and-glow-anchor-green:hover span:nth-child(1) {
+    left: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+}
+
+.spiral-and-glow-anchor-green span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #3af321);
+}
+
+.spiral-and-glow-anchor-green:hover span:nth-child(3) {
+    right: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+    /* transition-delay: 0.5s; */
+    transition-delay: 0.25s;
+}
+
+.spiral-and-glow-anchor-green span:nth-child(2) {
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #3af321);
+}
+
+.spiral-and-glow-anchor-green:hover span:nth-child(2) {
+    top: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+    transition-delay: 0.125s;
+}
+
+.spiral-and-glow-anchor-green span:nth-child(4) {
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #3af321);
+}
+
+.spiral-and-glow-anchor-green:hover span:nth-child(4) {
+    bottom: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+    /* transition-delay: 0.75s; */
+    transition-delay: 0.375s;
+}
+
+
+/* ---------------------- SPIRAL AND GLOW - PINK-------------------*/
+
+
+/* TO use, inside an anchor, keep 4 span before text data, something like this 
+<a href="#" class="spiral-and-glow-anchor-blue">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span> Neon Button
+    </a> */
+
+.spiral-and-glow-anchor-pink {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #f321e2;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.1s;
+}
+
+.spiral-and-glow-anchor-pink:hover {
+    color: #84257c;
+    background-color: #f321e2;
+    box-shadow: 0 0 10px #f321e2, 0 0 40px #f321e2, 0 0 80px #f321e2;
+    transition-delay: 0.5s;
+}
+
+.spiral-and-glow-anchor-pink span {
+    position: absolute;
+    display: block;
+}
+
+.spiral-and-glow-anchor-pink span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f321e2);
+}
+
+.spiral-and-glow-anchor-pink:hover span:nth-child(1) {
+    left: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+}
+
+.spiral-and-glow-anchor-pink span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #f321e2);
+}
+
+.spiral-and-glow-anchor-pink:hover span:nth-child(3) {
+    right: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+    /* transition-delay: 0.5s; */
+    transition-delay: 0.25s;
+}
+
+.spiral-and-glow-anchor-pink span:nth-child(2) {
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #f321e2);
+}
+
+.spiral-and-glow-anchor-pink:hover span:nth-child(2) {
+    top: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+    transition-delay: 0.125s;
+}
+
+.spiral-and-glow-anchor-pink span:nth-child(4) {
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #f321e2);
+}
+
+.spiral-and-glow-anchor-pink:hover span:nth-child(4) {
+    bottom: 100%;
+    /* transition: 1s; */
+    transition: 0.5s;
+    /* transition-delay: 0.75s; */
+    transition-delay: 0.375s;
+}
+
+
+/* ------------------------------------------------------- */

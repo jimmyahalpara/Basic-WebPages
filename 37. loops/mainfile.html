@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+
+<body>
+    <script>
+        arr = [12, 23, "jimmy"];
+        arr.forEach(element => {
+            console.log(element);
+        });
+
+        for (const element of arr) {
+            console.log(element);
+        }
+
+        let mm = {
+            "key1": "value1",
+            "key2": "value2"
+        }
+
+        for (const key in mm) {
+            if (Object.hasOwnProperty.call(mm, key)) {
+                const element = mm[key];
+                console.log(element);
+            }
+        }
+    </script>
+</body>
+
+</html>
