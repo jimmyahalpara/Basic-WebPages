@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time and Date in javascript</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a container
+    </div>
+    <script>
+        // let dt = new Date()
+        // console.log(dt);
+        // let dt = new Date(1)
+        // console.log(dt);
+        // let dt = new Date("2029-11-30")
+        // let dt = new Date(year, month, date, hours, minutes, milliseconds)
+        let dt = new Date(2090, 11, 12, 12, 13, 11, 12)
+        console.log(dt);
+
+        console.log(dt.getFullYear());
+        console.log(dt.getDate());
+        console.log(dt.getMonth());
+        console.log(dt.getHours());
+        console.log(dt.getMinutes());
+        console.log(dt.getSeconds());
+        dt.setDate(31)
+        console.log(dt);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions in Javascript</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a container
+    </div>
+
+    <script>
+        // function greet() {
+        //     console.log("Hellow Good morning");
+        // }
+        // greet = () => {
+        //     console.log("Hellow Good morning");
+        // }
+        greet = () => console.log("Hellow Good morning");
+
+        greet();
+
+        let sum = (a, b) => a + b;
+        let half = a => a / 2;
+        console.log(sum(34, 56));
+        console.log(half(30));
+
+        let obj1 = {
+            "greetings": "Good Morning",
+            names: ["jimmy", "Kumar", "Ahalpara"],
+            speak() {
+                this.names.forEach((student) => {
+                    console.log(this.greetings + " kukdo koo " + student);
+                });
+            }
+        }
+        obj1.speak()
+    </script>
+</body>
+
+</html>

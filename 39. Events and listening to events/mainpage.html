@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and listening to events</title>
+    <style>
+        #btn {
+            padding: 10px 10px;
+            outline: none;
+            border: 2px solid black;
+            border-radius: 2px;
+            font-family: sans-serif;
+            background-color: grey;
+            color: white;
+            box-shadow: 2px 2px 10px black;
+        }
+        
+        #btn:active {
+            background-color: red;
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Browser events 
+        click 
+        contextmenu 
+        mouseover/mouseout 
+        mousedown/mouseup 
+        mousemove submit 
+
+        submit 
+        focus
+        DOMContentLoaded
+        transitionend
+    -->
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam numquam modi aspernatur adipisci impedit temporibus nostrum? Eligendi aliquam ad adipisci at assumenda dolorum expedita deserunt, ipsam veniam, necessitatibus provident minus sed sint cupiditate
+            itaque suscipit maxime ab similique voluptates repellendus? Ratione quisquam impedit a laudantium, sapiente possimus ullam. A tenetur ea voluptatem asperiores corrupti fuga, eaque omnis culpa incidunt. Iusto molestias inventore dolorem commodi
+            tempora mollitia ut sequi reiciendis ad iure doloribus, nemo nostrum ducimus explicabo perferendis obcaecati cum amet ab perspiciatis porro sint. Possimus veritatis doloremque natus soluta ipsa tenetur sint facere omnis molestias et est aut
+            sequi itaque dolor fugiat illum laborum repellendus beatae ea alias, placeat error neque ipsam! Consectetur earum cupiditate fuga inventore facilis corporis sapiente odio necessitatibus quidem aut deleniti corrupti, minima nemo aspernatur
+            doloribus aperiam, dicta adipisci sunt accusantium. Molestias consequatur itaque tenetur quo iste nulla qui magnam reiciendis sit tempora quos, nobis ipsam quas cum perspiciatis. Voluptate rem quibusdam doloribus quae quaerat? Ea accusamus
+            laudantium quisquam molestias? Fuga nostrum, praesentium quidem accusantium modi error maxime earum ad eveniet odio inventore excepturi quis veniam animi voluptate culpa ab repellendus quibusdam quia facilis voluptatibus? Quos qui quis vero
+            quaerat tempora voluptas explicabo hic consequatur, itaque animi, debitis beatae quidem alias ipsam necessitatibus, facilis cumque? Veniam saepe, praesentium odio sit ducimus esse ullam minus distinctio totam in fugiat fugit ratione quae officia
+            eum dolores fuga adipisci? Corrupti, debitis officia!
+        </p>
+        <button id="btn" onclick="hide()">
+            Show/Hide
+        </button>
+    </div>
+    <script>
+        // let para = document.getElementById("para");
+        // para.addEventListener("mouseover", function run() {
+        //     console.log("mouseover paragraph");
+        // })
+        // para.addEventListener("mouseout", function run() {
+        //     console.log("mouseout paragraph");
+        // })
+
+        function hide() {
+            // let btn = document.getElementById("btn");
+            // let para = document.getElementById("para");
+            if (para.style.display != "none") {
+                para.style.display = "none";
+            } else {
+                para.style.display = "block"
+            }
+        }
+    </script>
+</body>
+
+</html>
