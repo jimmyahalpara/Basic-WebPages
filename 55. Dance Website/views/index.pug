@@ -6,6 +6,9 @@ html
     body 
         nav#navbar
             ul 
+                div#logo
+                    img(src="/static/img/logo1.jpg")
+                    | JDA
                 li #[a(href="/") Home]
                 li #[a(href="/") About]
                 li #[a(href="/") Services]
@@ -14,10 +17,38 @@ html
         section#introSection 
             div  Welcome to Jimmy's Dance Academy 
             div.small  Eat Sleep Dance Repeat
+
+        section#ourMission 
+            h2 Our Mission
+            div.card 
+                h3 Dance Perfection
+                div.card-box
+                    div.card-img
+                        img(src="/static/img/1.png")
+                    div.card-content
+                        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt nostrum quis tempora voluptatem voluptates officiis possimus reiciendis quasi a alias!
+            div.card 
+                h3 Dance the way you like
+                div.card-box
+                    div.card-img
+                        img(src="/static/img/2.jpg")
+                    div.card-content
+                        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt nostrum quis tempora voluptatem voluptates officiis possimus reiciendis quasi a alias!
+            div.card 
+                h3 Expert teaching 
+                div.card-box
+                    div.card-img
+                        img(src="/static/img/3.jpg")
+                    div.card-content
+                        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt nostrum quis tempora voluptatem voluptates officiis possimus reiciendis quasi a alias!
         section#sponsorSection 
             h2 Our Sponsors 
+            div#sponsors
+                img(src="/static/img/apple.png", alt="Our Sponsor" class="spImage")
+                img(src="/static/img/microsoft.png", alt="Our Sponsor" class="spImage")
+                img(src="/static/img/skype.png", alt="Our Sponsor" class="spImage")
         footer#footer 
-            | our footer here.
+            | Copyright © 2021 JimmyDanceAdacemy.com | All rights reserved
         script 
             include ../static/indexScript.js
 

@@ -14,11 +14,13 @@ body {
     background-color: rgba(121, 0, 0, 0.63);
     top: 0;
     left: 0;
+    color: white;
 }
 #navbar ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 #navbar li {
@@ -28,7 +30,7 @@ body {
 #navbar li a {
     color: white;
     text-decoration: none;
-    padding: 17px 13px;
+    padding: 32px 13px;
     display: inline-block;
     font-size: 1.1rem;
     border-radius: 3px;
@@ -37,6 +39,19 @@ body {
 #navbar li a:hover {
     color: black;
     background-color: white;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    margin: 0px 14px;
+    margin-right: 50px;
+    font-weight: bolder;
+}
+#logo img {
+    width: 31px;
+    border-radius: 58px;
+    margin: 10px 10px;
 }
 
 #introSection {
@@ -49,10 +64,51 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 2.5rem;
+    padding-top: 20px;
 }
 
 #introSection div {
-    text-shadow: 2px 2px 10px black, ;
+    text-shadow: 2px 2px 10px black;
+}
+
+#ourMission {
+    color: white;
+    padding-top: 10px;
+}
+#ourMission h2 {
+    text-align: center;
+}
+
+
+
+.card {
+    background-color: rgba(121, 0, 0, 0.63);
+    border: 2px solid white;
+    border-radius: 4px;
+    margin: 10px 20px;
+    padding: 10px 20px;
+    min-height: 233px;
+    width: 30%;
+    display: inline-block;
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.card-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.card-img img {
+    /* width: 100px; */
+    height: 150px;
+    margin: 10px 10px;
+    /* border: 2px solid red; */
+    border-radius: 10px;
 }
 
 #sponsorSection {
@@ -64,9 +120,26 @@ body {
     text-align: center;
     padding: 10px 20px;
 }
+#sponsors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spImage {
+    margin: 16px 30px;
+    height: 150px;
+    /* width: 150px; */
+    /* border: 2px solid black; */
+}
+
+
 #footer {
-    height: 100px;
+    height: 48px;
     background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .small {

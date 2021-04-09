@@ -18,8 +18,15 @@ app.set('views', path.join(__dirname, 'views'));
 // Endpoints 
 app.get('/', (req, res)=> {
     const parms = {};
-    res.status(200).render("index.pug", parms);
+    res.status(200).render("home.pug", parms);
 })
+
+app.get('/contact', (req, res)=> {
+    const parms = {};
+    res.status(200).render("contact.pug", parms);
+})
+
+
 
 app.listen(port, ()=>{
     console.log(`The application started sucessfully on port ${port}`);
