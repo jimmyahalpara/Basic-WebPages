@@ -92,4 +92,4 @@ db.anotherCollection.insertOne({ a: 200 });
 
 db.items.updateOne({ rating: 4.5 }, { $set: { price: 2 } });
 
-db.items.updateMany({ name: "Moto 30s" }, { $set: { price: 3, rating: 1 } });
+db.items.updateMany({ name: "Moto 30s" }, { $set: { price: 3, rating: 1 } });ē
