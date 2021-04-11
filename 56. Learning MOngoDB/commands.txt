@@ -1,0 +1,82 @@
+use JimmyKart
+db.items.insertOne({
+    name: "Samsung 30s",
+    price: 22000,
+    rating: 4.5,
+    qty: 233,
+    sold: 98
+})
+
+
+db.items.insertMany([{
+        name: "Samsung 30s",
+        price: 22000,
+        rating: 4.5,
+        qty: 233,
+        sold: 98
+    },
+    {
+        name: "Samsung 20s",
+        price: 2200,
+        rating: 4.5,
+        qty: 233,
+        sold: 98
+    },
+    {
+        name: "Samsung 40s",
+        price: 32000,
+        rating: 4.5,
+        qty: 233,
+        sold: 98
+    }
+])
+
+
+show dbs // show all the datase present, by default when you start the mongodb, it'll use test database, which you'll have to change using `use databasename` command
+
+show collections // show all the collections in the databas, here collections refers to tables
+
+db.items.find() // shows all the data 
+
+
+// searching for data in mongo db
+
+// this query will return all the objects with rating equal to 3.5
+// the object which we are passing in the find function is called filter object.
+db.items.find({ rating: 3.5 })
+
+
+// items with rating greator than or equal to 3.5
+db.items.find({ rating: { $gte: 3.5 } })
+
+// items with rating greator than 3.5
+db.items.find({ rating: { $gt: 3.5 } })
+
+// and operator using simple comma (,)
+db.items.find({ rating: { $gt: 3.5 }, price: { $gt: 4000 } })
+
+// $lt for less than
+
+
+// for or, pass array of conditions as value of $or key
+db.items.find({
+    $or: [
+        { rating: { $gt: 3.5 } },
+        { price: { $gt: 4000 } }
+    ]
+})
+
+
+//  only selecting certian item attribute by passing another parameter    
+db.items.find({ rating: { $gt: 3.5 } }, { rating: 1, name: 1 })
+
+
+// deleting data in mongodb
+// deleting the data and searching the data is similar
+
+db.items.deleteOne({ price: 2200 });
+// all the conditions passed will be similar to ones passed in find()
+// will delete first entry in case if multiple entries are found.
+
+db.items.deleteMany({ price: 22000 });
+// syntax of conditions passed same as find, deletes all the entries present in the collection
