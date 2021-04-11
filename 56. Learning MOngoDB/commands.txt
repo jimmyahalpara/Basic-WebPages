@@ -80,3 +80,16 @@ db.items.deleteOne({ price: 2200 });
 
 db.items.deleteMany({ price: 22000 });
 // syntax of conditions passed same as find, deletes all the entries present in the collection
+
+
+
+db.anotherCollection.insertOne({ a: 200 });
+
+
+// db.collections.updatOne(<filterObject>, <newObject>)
+// db.collections.updat(<filterObject>, <newObject>)
+
+
+db.items.updateOne({ rating: 4.5 }, { $set: { price: 2 } });
+
+db.items.updateMany({ name: "Moto 30s" }, { $set: { price: 3, rating: 1 } });
