@@ -1,5 +1,5 @@
 function updateMap() {
-    fetch("/data.json")
+    fetch("/58. Plotting COVID Cases/data.json")
         .then(response => response.json())
         .then(rsp => {
             console.log(rsp.data);
