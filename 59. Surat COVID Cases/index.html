@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Map</title>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id='map' style='width: 1350px; height: 650px;'></div>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiamltbXlhaGFscGFyYSIsImEiOiJja25lMWxuOXgwdGwxMm5waHBiYjdtOTI5In0.1DgnvZzaO67zL1b4n6FKzw';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/street-v11'
+        });
+    </script>
+    <script src="58. Plotting COVID Cases/index.js" type="text/javascriptp"></script>
+    <script>
+        function updateMap() {
+            fetch("./data.json")
+                .then(response => response.json())
+                .then(rsp => {
+                    console.log(rsp.data[0]);
+                    // rsp.data.forEach(element => {
+                    //     console.log(element[5], element[6]);
+                    // });
+                    rsp.data.forEach(element => {
+                        latitude = element[5];
+                        longitude = element[6];
+
+                        //     cases = element.infected;
+
+                        //     if (cases > 2550) {
+                        //         color = "rgb(255, 0, 0)";
+                        //     } else {
+                        //         color = `rgb(${cases/10}, 0, 0)`;
+                        //     }
+
+                        new mapboxgl.Marker({
+                                draggable: false,
+                                //             color: color
+                            }).setLngLat([longitude, latitude])
+                            .addTo(map)
+                    })
+
+
+
+
+
+
+
+                    // mark on the map
+
+
+                });
+        }
+
+        // setInterval(updateMap, 2000);
+        updateMap();
+    </script>
+</body>
+
+</html>
